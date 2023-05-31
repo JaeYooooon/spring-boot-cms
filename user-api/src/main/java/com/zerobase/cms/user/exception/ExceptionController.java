@@ -5,6 +5,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.ServletException;
+
 @ControllerAdvice
 @Slf4j
 public class ExceptionController {
@@ -13,6 +15,7 @@ public class ExceptionController {
         log.warn("api Exception : {}",c.getErrorCode());
         return ResponseEntity.badRequest().body(new ExceptionResponse(c.getMessage(), c.getErrorCode()));
     }
+
 
     @Getter
     @ToString
