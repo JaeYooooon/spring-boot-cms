@@ -35,7 +35,7 @@ public class SignUpCustomerService {
                 .orElseThrow(() -> new CustomException(NOT_USER_FOUND));
         if(customer.isVerify()){
             throw new CustomException(ALREADY_VERIFY);
-        } else if(customer.getVerificationCode().equals(code)){
+        } else if(!customer.getVerificationCode().equals(code)){
             throw new CustomException(WRONG_VERIFICATION);
         } else if(customer.getVerifyExpiredAt().isBefore(LocalDateTime.now())){
             throw new CustomException(EXPIRE_CODE);

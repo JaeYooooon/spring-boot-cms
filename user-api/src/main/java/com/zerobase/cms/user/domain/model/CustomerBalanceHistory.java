@@ -2,7 +2,6 @@ package com.zerobase.cms.user.domain.model;
 
 import com.fasterxml.jackson.databind.ser.Serializers;
 import lombok.*;
-import org.hibernate.envers.AuditOverride;
 
 import javax.persistence.*;
 
@@ -12,8 +11,7 @@ import javax.persistence.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@AuditOverride(forClass = BaseEntity.class)
-public class CustomerBalanceHistory extends Serializers.Base {
+public class CustomerBalanceHistory extends BaseEntity {
     @Id
     @Column(name = "id", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
