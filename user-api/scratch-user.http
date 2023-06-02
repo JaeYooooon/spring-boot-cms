@@ -1,0 +1,41 @@
+### 회원가입 (고객)
+POST http://localhost:8081/signup/customer
+Content-Type: application/json
+
+{
+  "birth": "1998-12-22",
+  "email": "dhy04050@naver.com",
+  "name": "myName",
+  "password": "pw",
+  "phone": "01000000000"
+}
+
+### 이메일 인증 (고객)
+GET http://localhost:8081/signup/customer/verify?email=dhy04050@naver.com&code=VVDuPcLWTM
+
+### 로그인 (고객)
+POST http://localhost:8081/signin/customer
+Content-Type: application/json
+
+{
+  "email": "dhy04050@naver.com",
+  "password": "pw"
+}
+
+### 회원 정보 조회 (고객)
+GET http://localhost:8081/customer/getInfo
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJEdUg3K0ZpWXJEWG0vbi9BbmNLU3J2MitnaEVyZXlVaEVVVnpsVjZKbWd3PSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODU1OTc1NzUsImV4cCI6MTY4NTY4Mzk3NX0.EDUMgkxUQMXZmgsuDPT86ZayE1w_4IQF-oteHF43NPA
+
+
+### 잔액 변경 (고객)
+POST http://localhost:8081/customer/balance
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJEdUg3K0ZpWXJEWG0vbi9BbmNLU3J2MitnaEVyZXlVaEVVVnpsVjZKbWd3PSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODU1OTc1NzUsImV4cCI6MTY4NTY4Mzk3NX0.EDUMgkxUQMXZmgsuDPT86ZayE1w_4IQF-oteHF43NPA
+
+
+{
+  "from": "sever",
+  "message": "돈 충전",
+  "money": 50000
+}
