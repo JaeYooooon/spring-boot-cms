@@ -70,3 +70,10 @@ DELETE http://localhost:8082/seller/product/item?id=2
 Content-Type: application/json
 X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJEdUg3K0ZpWXJEWG0vbi9BbmNLU3J2MitnaEVyZXlVaEVVVnpsVjZKbWd3PSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjg1ODU2MDU4LCJleHAiOjE2ODU5NDI0NTh9.xCIhZ2qirYr13R0q_q7V6aGcU1mGGKscAD8CymWEoP4
 
+### 상품 검색
+GET http://localhost:8082/search/product?name=나이키
+Content-Type: application/json
+
+### 상품 디테일 검색
+GET http://localhost:8082/search/product/detail?productId=1
+Content-Type: application/json
