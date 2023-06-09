@@ -1,11 +1,9 @@
 package com.zerobase.cms.user.service.seller;
 
 import com.zerobase.cms.user.domain.SignUpForm;
-import com.zerobase.cms.user.domain.model.Customer;
 import com.zerobase.cms.user.domain.model.Seller;
 import com.zerobase.cms.user.domain.repository.SellerRepository;
 import com.zerobase.cms.user.exception.CustomException;
-import com.zerobase.cms.user.exception.ErrorCode;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,7 +12,6 @@ import java.time.LocalDateTime;
 import java.util.Optional;
 
 import static com.zerobase.cms.user.exception.ErrorCode.*;
-import static com.zerobase.cms.user.exception.ErrorCode.EXPIRE_CODE;
 
 @Service
 @RequiredArgsConstructor

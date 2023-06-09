@@ -1,6 +1,5 @@
 package com.zerobase.cms.order.controller;
 
-import com.zerobase.cms.order.domain.model.Product;
 import com.zerobase.cms.order.domain.product.ProductDto;
 import com.zerobase.cms.order.service.ProductSearchService;
 import com.zerobase.domain.config.JwtAuthenticationProvider;

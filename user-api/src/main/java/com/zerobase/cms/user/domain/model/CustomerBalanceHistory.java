@@ -1,6 +1,5 @@
 package com.zerobase.cms.user.domain.model;
 
-import com.fasterxml.jackson.databind.ser.Serializers;
 import lombok.*;
 
 import javax.persistence.*;
